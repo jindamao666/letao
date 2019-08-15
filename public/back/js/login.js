@@ -5,6 +5,13 @@ $(function () {
 
     //配置的字段和input框中指定的name关联，所以必须要给input加上name
     $("#form").bootstrapValidator({
+        //配置校验图标
+        // 指定校验时的图标显示，默认是bootstrap风格
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',//校验成功
+            invalid: 'glyphicon glyphicon-remove',//校验失败
+            validating: 'glyphicon glyphicon-refresh'//校验中
+        },
         //配置字段
         fields:{
             username:{
