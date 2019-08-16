@@ -115,6 +115,7 @@ ul{
     top: 0;
     padding-left: 180px;
     transition: all 1s;
+    z-index: 998;
 }
 .lt_topbar.hidemenu{
     padding: 0;
