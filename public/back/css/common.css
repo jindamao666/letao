@@ -11,6 +11,9 @@ a:active{
 .red {
     color: #A94442;
 }
+.mb_20{
+    margin-bottom: 20px;
+}
 ul{
     list-style: none;
     margin: 0;
