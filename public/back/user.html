@@ -75,13 +75,13 @@
 
 <!--            3.x的bootstrap版本，dom结构必须使用ul-->
             <div class="text-right">
+                <!--    准备分页容器-->
                 <ul id="paginator" class=""></ul>
             </div>
         </div>
     </div>
 
     <!-- 登录退出的模态框,  配置 data-dismiss="modal" 可以关闭模态框 -->
-<!--    准备分页容器-->
     <div class="modal fade" id="logoutModal">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -95,6 +95,24 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                     <button type="button" class="btn btn-primary" id="logoutBtn">退出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    启用禁用模态框-->
+    <div class="modal fade" id="userModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="red"><i class="glyphicon glyphicon-info-sign"></i>你确定要执行此操作吗？</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="submitBtn">确认</button>
                 </div>
             </div>
         </div>
@@ -115,7 +133,7 @@
         <td>{{v.mobile}}</td>
 <!--        isDelete 标记用户状态，如果为1表示启用状态，如果为0 就表示禁用状态-->
         <td>{{v.isDelete === 1 ? "正常" : "禁用"}}</td>
-        <td>
+        <td data-id="{{ v.id }}">
             {{ if v.isDelete === 1}}
             <button class="btn btn-danger">禁用</button>
             {{ /if}}
