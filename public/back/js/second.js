@@ -92,7 +92,7 @@ $(function () {
             $('#form').data("bootstrapValidator").updateStatus("brandLogo","VALID");
         }
     });
-   //5.实现表单校验
+   //5.进行表单校验初始化
     $('#form').bootstrapValidator({
         //1. 指定不校验的类型，默认为[':disabled', ':hidden', ':not(:visible)'],可以不设置
         // 我们需要对隐藏域进行校验，所以不需要将隐藏域排除到校验范围外
@@ -141,6 +141,7 @@ $(function () {
         $.ajax({
             type:"post",
             url:"/category/addSecondCategory",
+            //获取表单元素的数据
             data:$('#form').serialize(),
             dataType:"json",
             success:function ( info ) {
