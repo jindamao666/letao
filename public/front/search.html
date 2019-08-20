@@ -63,10 +63,11 @@
     <div class="content">
         <ul>
             <!--挖个坑-->
+            <!--v是每一项，i是下标-->
             {{each arr v i}}
             <li>
                 <a href="#" class="mui-pull-left">{{v}}</a>
-                <i class="mui-icon mui-icon-closeempty mui-pull-right"></i>
+                <i data-index="{{i}}" class="btn_del mui-icon mui-icon-closeempty mui-pull-right"></i>
             </li>
             {{/each}}
         </ul>
