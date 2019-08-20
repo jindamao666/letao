@@ -107,7 +107,7 @@ $(function () {
         //清空输入框
         $('.search_input').val("");
         //添加跳转,跳转到产品列表页
-        location.href = "search_list.html?key="+key;
+        location.href = "searchList.html?key="+key;
     })
 
 
