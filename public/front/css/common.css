@@ -139,11 +139,11 @@ img{
 .lt_product_item .oldPrice{
     text-decoration: line-through;
 }
-/*.lt_product_item img{*/
-/*    width: 150px;*/
-/*    height: 150px;*/
-/*    margin: 0 auto;*/
-/*}*/
-/*.lt_product_item .mui-ellipsis-2{*/
-/*    height: 40px;*/
-/*}*/
+.lt_product_item img{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+.lt_product_item .mui-ellipsis-2{
+    height: 40px;
+}

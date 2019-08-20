@@ -82,7 +82,9 @@ $(function () {
         //（2)获取输入框的值
         var key = $('.search_input').val().trim();
         if(key === ""){
-            alert("请输入搜索关键字");
+            mui.toast("请输入搜索关键字",{
+                duration:2000,
+            });
             return;
         }
         //（3)获取本地历史中存的数组

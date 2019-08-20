@@ -16,3 +16,23 @@
 .lt_sort a i{
     margin: 0 3px;
 }
+.loading{
+    width: 50px;
+    height: 50px;
+    border: 5px solid #069;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+/*    使用动画*/
+    animation: rotate 1s infinite;
+}
+/*动画*/
+@keyframes rotate {
+    from{
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to{
+        transform: translateX(-50%) rotate(360deg);
+    }
+}

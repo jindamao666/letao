@@ -32,16 +32,13 @@
                 <!--排序模块-->
                 <div class="lt_sort">
                     <a href="#">上架时间<i class="fa fa-angle-down"></i></a>
-                    <a href="#" class="current">价格<i class="fa fa-angle-down"></i></a>
-                    <a href="#">库存<i class="fa fa-angle-down"></i></a>
+                    <a data-type="price" href="#">价格<i class="fa fa-angle-down"></i></a>
+                    <a data-type="num" href="#">库存<i class="fa fa-angle-down"></i></a>
                     <a href="#">折扣<i class="fa fa-angle-down"></i></a>
                 </div>
                 <!--产品模块-->
                 <div class="lt_product">
-                    <!-- ooook-->
-                    <ul>
-
-                    </ul>
+                    <div class="loading"></div>
                 </div>
             </div>
         </div>
@@ -58,7 +55,8 @@
     </div>
 </div>
 <script type="text/html" id="tpl">
-    {{each data v i}}
+    <ul>
+        {{each data v i}}
         <li class="lt_product_item"><a href="#">
             <img src="{{v.pic[0].picAddr}}" alt="">
             <p class="mui-ellipsis-2">{{v.proName}}</p>
@@ -69,7 +67,8 @@
             <button class="mui-btn mui-btn-primary">立即购买</button>
         </a>
         </li>
-    {{/each}}
+        {{/each}}
+    </ul>
 </script>
 <!--ui组件库，相当于pc端的bootstrap-->
 <script src="./lib/mui/js/mui.js"></script>
